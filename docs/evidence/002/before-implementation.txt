@@ -1,0 +1,141 @@
+python3 tests/test_cli.py
+FFFFFFFFFFFFFF..F.
+======================================================================
+FAIL: test_blocked_defaults (__main__.AcceptanceTests.test_blocked_defaults)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 39, in test_blocked_defaults
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=1, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=1, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=4, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=4, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=31, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=31, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=32, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=32, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=33, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=33, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=65, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=65, repeats=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_blocked_edges (__main__.AcceptanceTests.test_blocked_edges) (n=4096, repeats=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 30, in test_blocked_edges
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : Invalid arguments. Run matrix-scan --help.
+
+
+======================================================================
+FAIL: test_help (__main__.AcceptanceTests.test_help)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/itzamna/Documents/ChatGPT/Work/spec-to-perf-hello-world/tests/test_cli.py", line 71, in test_help
+    self.assertIn(mode, p.stdout)
+AssertionError: 'blocked' not found in 'Usage: matrix-scan {row|column} [size:1..4096] [repeats:1..1000]\n'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.043s
+
+FAILED (failures=15)
+make: *** [Makefile:10: test] Error 1

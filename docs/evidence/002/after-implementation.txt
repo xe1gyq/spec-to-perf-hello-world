@@ -1,0 +1,8 @@
+mkdir -p build
+gcc -O2 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/main.c -o build/matrix-scan
+python3 tests/test_cli.py
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.150s
+
+OK

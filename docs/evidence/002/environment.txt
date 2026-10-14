@@ -1,0 +1,35 @@
+Wed Oct 14 18:56:45 UTC 2026
+Linux 6.12.0-264.el10.x86_64 x86_64 GNU/Linux
+gcc (GCC) 14.4.1 20260724 (Red Hat 14.4.1-3)
+perf version 6.12.0-275.el10.x86_64
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) i7-8809G CPU @ 3.10GHz
+CPU family:                              6
+Model:                                   158
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+Stepping:                                9
+CPU(s) scaling MHz:                      51%
+CPU max MHz:                             8300.0000
+CPU min MHz:                             800.0000
+BogoMIPS:                                6199.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp vnmi md_clear flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               128 KiB (4 instances)
+L1i cache:                               128 KiB (4 instances)
+L2 cache:                                1 MiB (4 instances)
+L3 cache:                                8 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-7
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Ghostwrite:                Not affected
+2858c1c30b5a75ad9223504657c3040a8243b632a097f7497474764ced1cf895  src/main.c
+f2ceeb543bf61e9b7293766b60ce26d1a9652db66cfe320ee6b91792cf4a5beb  Makefile
+73f45fa10078290ead78df71700ca0b9cff3833c2890e6ebf8f0ddc0c345ea03  build/matrix-scan

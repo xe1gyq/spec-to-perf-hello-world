@@ -27,6 +27,24 @@ uint64_t sum_columns(const volatile uint32_t *data, size_t n) {
     return sum;
 }
 
+enum { BLOCK_SIZE = 32 };
+
+__attribute__((noinline))
+uint64_t sum_blocked(const volatile uint32_t *data, size_t n) {
+    uint64_t sum = 0;
+    for (size_t br = 0; br < n; br += BLOCK_SIZE) {
+        size_t row_end = br + BLOCK_SIZE < n ? br + BLOCK_SIZE : n;
+        for (size_t bc = 0; bc < n; bc += BLOCK_SIZE) {
+            size_t col_end = bc + BLOCK_SIZE < n ? bc + BLOCK_SIZE : n;
+            /* Retain column traversal inside each clipped tile. */
+            for (size_t col = bc; col < col_end; ++col)
+                for (size_t row = br; row < row_end; ++row)
+                    sum += data[row * n + col];
+        }
+    }
+    return sum;
+}
+
 static int parse(const char *s, size_t limit, size_t *out) {
     if (!*s) return 0;
     for (const char *p = s; *p; ++p)
@@ -46,11 +64,12 @@ static double seconds(struct timespec t) {
 int main(int argc, char **argv) {
     size_t n = 2048, repeats = 20;
     if (argc == 2 && strcmp(argv[1], "--help") == 0) {
-        puts("Usage: matrix-scan {row|column} [size:1..4096] [repeats:1..1000]");
+        puts("Usage: matrix-scan {row|column|blocked} [size:1..4096] [repeats:1..1000]");
         return 0;
     }
     if (argc < 2 || argc > 4 ||
-        (strcmp(argv[1], "row") && strcmp(argv[1], "column")) ||
+        (strcmp(argv[1], "row") && strcmp(argv[1], "column") &&
+         strcmp(argv[1], "blocked")) ||
         (argc >= 3 && !parse(argv[2], 4096, &n)) ||
         (argc == 4 && !parse(argv[3], 1000, &repeats))) {
         fputs("Invalid arguments. Run matrix-scan --help.\n", stderr);
@@ -64,7 +83,8 @@ int main(int argc, char **argv) {
         expected += data[i];
     }
     uint64_t (*scan)(const volatile uint32_t *, size_t) =
-        strcmp(argv[1], "row") == 0 ? sum_rows : sum_columns;
+        strcmp(argv[1], "row") == 0 ? sum_rows :
+        strcmp(argv[1], "column") == 0 ? sum_columns : sum_blocked;
     struct timespec start, end;
     if (clock_gettime(CLOCK_MONOTONIC, &start)) { free(data); return 1; }
     for (size_t r = 0; r < repeats; ++r) checksum += scan(data, n);

@@ -4,7 +4,7 @@ A beginner-friendly, English-language lab for **AI-driven specification template
 
 **Question:** Can two programs do the same work correctly but take different amounts of time?
 
-We store a square matrix (a grid of numbers) in one continuous array. One mode reads it row by row; the other reads it column by column. Both must produce the same checksum (the sum of all values across all repetitions).
+We store a square matrix (a grid of numbers) in one continuous array. The modes read it row by row, column by column, or in 32 × 32 tiles. All must produce the same checksum (the sum of all values across all repetitions).
 
 ## Start here
 
@@ -12,7 +12,8 @@ We store a square matrix (a grid of numbers) in one continuous array. One mode r
 2. Compare the [blank template](templates/feature-spec.md) with the [completed specification](specs/001-matrix-scan.md).
 3. Follow [the AI and scaffolding exercise](docs/02-spec-to-scaffold.md).
 4. Build the binary, then follow [the perf lab](docs/03-perf-lab.md).
-5. Read [the actual validation record](docs/04-validation.md).
+5. Read [the original validation record](docs/04-validation.md).
+6. Follow [feature 002, interaction by interaction](docs/05-feature-002-walkthrough.md): a complete additive change in one commit, with [new measurements](docs/06-blocked-validation.md).
 
 ## Run your first binary
 
@@ -51,3 +52,12 @@ This records performance evidence under `results/` when `perf` and the required 
 | `docs/` | Lessons and evidence |
 
 This repository is a completed reference scaffold generated with AI assistance and checked locally. It introduces enterprise habits—traceable requirements, input bounds, reproducible builds, review, and automated checks—through one local tool. It is not a production enterprise application.
+
+## Feature 002: blocked traversal
+
+```sh
+./build/matrix-scan blocked 33 1
+bash scripts/profile-002.sh
+```
+
+Read [specification 002](specs/002-blocked-scan.md) before the implementation. The dedicated script compares all three modes; `make profile` retains the original two-mode lesson.

@@ -1,0 +1,33 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 30  of event 'cpu-clock:u'
+# Event count (approx.): 303030300
+#
+# Children      Self  Command      Shared Object  Symbol                    
+# ........  ........  ...........  .............  ..........................
+#
+   100.00%   100.00%  matrix-scan  matrix-scan    [.] sum_blocked
+            |
+            ---__libc_start_call_main
+               main
+               sum_blocked
+
+   100.00%     0.00%  matrix-scan  libc.so.6      [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+               sum_blocked
+
+   100.00%     0.00%  matrix-scan  matrix-scan    [.] main
+            |
+            ---main
+               sum_blocked
+
+
+
+#
+# (Tip: To record every process run by a user: perf record -u <user>)
+#

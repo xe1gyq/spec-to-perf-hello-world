@@ -1,0 +1,12 @@
+# started on Wed Oct 14 12:56:48 2026
+
+
+ Performance counter stats for './build/matrix-scan blocked 2048 20' (5 runs):
+
+         258998411      cycles:u                                                                ( +-  0.16% )
+         586957952      instructions:u                                                          ( +-  0.00% )
+          17015164      cache-references:u                                                      ( +-  1.35% )
+           4567399      cache-misses:u                                                          ( +-  1.82% )
+
+          0.066335 +- 0.000243 seconds time elapsed  ( +-  0.37% )
+
