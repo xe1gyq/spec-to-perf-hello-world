@@ -1,0 +1,13 @@
+# started on Tue Oct 13 19:24:34 2026
+
+
+ Performance counter stats for './build/matrix-scan row 2048 20' (5 runs):
+
+             46.49 msec task-clock:u                                                            ( +-  0.60% )
+         165865897      cycles:u                                                                ( +-  0.74% )
+         478599981      instructions:u                                                          ( +-  0.00% )
+          11450622      cache-references:u                                                      ( +-  0.71% )
+           7429117      cache-misses:u                                                          ( +-  0.93% )
+
+          0.047009 +- 0.000311 seconds time elapsed  ( +-  0.66% )
+

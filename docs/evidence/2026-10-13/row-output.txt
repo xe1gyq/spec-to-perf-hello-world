@@ -1,0 +1,5 @@
+mode=row size=2048 repeats=20 checksum=10485612420 elapsed_seconds=0.041160
+mode=row size=2048 repeats=20 checksum=10485612420 elapsed_seconds=0.040182
+mode=row size=2048 repeats=20 checksum=10485612420 elapsed_seconds=0.039749
+mode=row size=2048 repeats=20 checksum=10485612420 elapsed_seconds=0.040342
+mode=row size=2048 repeats=20 checksum=10485612420 elapsed_seconds=0.040198

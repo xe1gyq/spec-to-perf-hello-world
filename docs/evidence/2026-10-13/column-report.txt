@@ -1,0 +1,26 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 259  of event 'cpu-clock:u'
+# Event count (approx.): 2616161590
+#
+# Children      Self  Command      Shared Object  Symbol                    
+# ........  ........  ...........  .............  ..........................
+#
+   100.00%   100.00%  matrix-scan  matrix-scan    [.] sum_columns
+            |
+            ---__libc_start_call_main
+               sum_columns
+
+   100.00%     0.00%  matrix-scan  libc.so.6      [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               sum_columns
+
+
+
+#
+# (Tip: For hierarchical output, try: perf report --hierarchy)
+#
